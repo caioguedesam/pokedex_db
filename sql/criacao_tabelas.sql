@@ -1,7 +1,7 @@
 CREATE TABLE Pokemon (
   id_pokemon INT NOT NULL,
   nome VARCHAR(50) NOT NULL,
-  descricao VARCHAR(300)
+  descricao VARCHAR(300),
   PRIMARY KEY (id_pokemon)
 );
 
