@@ -50,7 +50,7 @@ CREATE TABLE UsoAtaque (
   id_ataque INT NOT NULL,
   ano INT NOT NULL,
   mes INT NOT NULL,
-  percentagem FLOAT NOT NULL,
+  porcentagem FLOAT NOT NULL,
   FOREIGN KEY (id_pokemon) REFERENCES Pokemon(id_pokemon),
   FOREIGN KEY (id_ataque) REFERENCES Ataque(id_ataque)
 );
@@ -67,7 +67,7 @@ CREATE TABLE UsoHabilidade (
   id_habilidade INT NOT NULL,
   ano INT NOT NULL,
   mes INT NOT NULL,
-  percentagem FLOAT NOT NULL,
+  porcentagem FLOAT NOT NULL,
   FOREIGN KEY (id_pokemon) REFERENCES Pokemon(id_pokemon),
   FOREIGN KEY (id_habilidade) REFERENCES Habilidade(id_habilidade)
 )
