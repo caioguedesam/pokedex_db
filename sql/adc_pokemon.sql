@@ -769,7 +769,7 @@ INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("768", "Golisopod", "I
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("769", "Sandygast", "It takes control of anyone who puts a hand in its mouth. And so it adds to the accumulation of its sand-mound body.");
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("770", "Palossand", "Buried beneath the castle are masses of dried-up bones from those whose vitality it has drained.");
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("771", "Pyukumuku", "These Pokémon line the beaches. The sticky mucous that covers their bodies can be used to soothe sunburned skin. How convenient!");
-INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("772", "Type-null", "Due to the danger that this synthetic Pokémon may go on a rampage, it wears a control mask to restrain its power.");
+INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("772", "Type: Null", "Due to the danger that this synthetic Pokémon may go on a rampage, it wears a control mask to restrain its power.");
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("773", "Silvally", "Although its name was Type: Null at first, the boy who evolved it into this form gave it the name by which it is now known.");
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("774", "Minior-red-meteor", "Strong impacts can knock it out of its shell. This Pokémon was born from mutated nanoparticles.");
 INSERT INTO Pokemon (id_pokemon, nome, descricao) VALUES ("775", "Komala", "The log it holds was given to it by its parents at birth. It has also been known to cling to the arm of a friendly Trainer.");
