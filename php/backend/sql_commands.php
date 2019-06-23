@@ -6,11 +6,15 @@
 
 		$result = $conn->query($sqlStatement);
 
-		$rows = [];
-        while($row = $result->fetch_assoc()){
-            array_push($rows, $row);
-        }
+		if(!$result){
+            echo "[]";
+		}else{
+            $rows = [];
+            while($row = $result->fetch_assoc()){
+                array_push($rows, $row);
+            }
 
-        echo json_encode($rows);
+            echo json_encode($rows);
+        }
 	}
 ?>
