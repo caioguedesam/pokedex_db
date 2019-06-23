@@ -1,5 +1,5 @@
 <?php
-	include_once("dbConfig.php");
+	include_once("db_config.php");
 
 	function updateSql($sqlStatement, $sqlDataJson){
 		return sqlCommand($sqlStatement, $sqlDataJson, false);
