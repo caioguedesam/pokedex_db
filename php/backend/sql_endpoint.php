@@ -11,6 +11,6 @@
     exit();
   }
 
-  $json_output = querySql($sql_command, '{\"\":[]}');
+  $json_output = querySql($sql_command);
   echo $json_output;
 ?>
