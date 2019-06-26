@@ -1,0 +1,18 @@
+<div class="evolutions-container">
+  <p>Evoluções</p>
+  <div class="flex-container">
+  
+    <ng-container *ngFor="let img of imgEvolutions; let i = index">
+  
+      <div [routerLink]="['/pokemon-detail', idEvolutions[i]]">
+        <img [src]="img ? img : 'assets/images/default-pokemon.jpg'">
+      </div>
+  
+      <div class="arrow-next" *ngIf="pokemonEvolutions.length - 1 > i">
+        <span>&#8250;</span>
+      </div>
+    </ng-container>
+    
+  
+  </div>
+</div>

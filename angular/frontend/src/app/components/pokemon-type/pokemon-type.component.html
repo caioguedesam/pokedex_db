@@ -1,0 +1,10 @@
+<span class="col-sm-12 col-md-4">
+  <div class="types-container">
+    <span 
+      *ngFor="let type of typesObj"
+      [style.background-color]="type.background"
+      [style.color]="type.color"
+      class="badge type-content">{{ type.type | titlecase }}
+    </span>
+  </div>
+</span>

@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-default">
+      <div>
+        <a class="mybtn btn btn-link btn-xs" [routerLink]="['/pokemon-list']"><i class="fa fa-arrow-circle-o-left" style="font-size:2.5rem;"></i></a>
+        <div class="navbar-brand">Retornar a listagem</div>
+      </div>
+    </div>
+  </div>           
+</nav>
+
+<div class="container">
+  <div class="row">
+    
+    <div id="textarea-container" class="editor-holder">
+      <ul class="toolbar">
+        <!-- <li><a (click)="indent()" id="indent" title="Toggle tabs or spaces"><i class="fa fa-indent"></i></a></li> -->
+        <li><a (click)="fullScreen()" id="fullscreen" title="Toggle fullscreen mode"><i class="fa fa-expand"></i></a></li>
+      </ul>
+      <div class="scroller">
+        <textarea
+          (ngModelChange)="hightlightSyntax()"
+          [(ngModel)]="textareaContent"
+          id="highlight-textarea"
+          class="editor allow-tabs"
+          onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">
+        </textarea>
+        <pre><code [languages]="['SQL']" [highlight]="textareaContent" id="code-container" class="syntax-highight html"></code></pre>
+      </div>
+    </div>
+  </div>
+  <div (click)="sendQuery()" class="send-button">
+    <button class="btn">Consultar</button>
+  </div>
+
+  <div [hidden]="!formatedJson">
+    <pre id="query-result"></pre>
+  </div>
+
+</div>
+

@@ -1,0 +1,26 @@
+<div class="content-container">
+  <div [style.background]="'url(/assets/images/wallpaper.jpg' + ')'" class="flex-container search-container">
+    <div class="top-content flex-container">
+      <img class="pokemon-logo" src="assets/images/pokemon-logo.png">
+  
+      <div class="search-bar">
+        <input placeholder="Busque seu pokemon aqui..." type="text" [(ngModel)]="searchContent">
+      </div>
+
+      <div [routerLink]="['/pokemon-queries']" class="query-container">
+        <button class="btn">Faça suas próprias consultas</button>
+      </div>
+    </div>
+  </div>    
+
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div *ngIf="!isLoading" style="min-height: 100vh;" [style.background]="'url(/assets/images/website-background.jpg' + ')'">
+    <div class="container list-container">
+      <div [routerLink]="['/pokemon-detail', pokemon?.id_pokemon]" class="list-item col-sm-6 col-md-3" *ngFor="let pokemon of pokemonList | genericFilter:searchContent">
+        <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
+      </div>
+    </div>
+  </div>
+
+</div>
