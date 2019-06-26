@@ -1,0 +1,72 @@
+<div class="content-container">
+  <div class="pokemon-name">
+    <div class="back-button">
+      <a class="mybtn btn btn-link btn-xs" [routerLink]="['/pokemon-list']"><i class="fa fa-arrow-circle-o-left" style="font-size:2.5rem;"></i></a>
+      <div class="navbar-brand">Retornar a listagem</div>
+    </div>
+    <span>{{ pokemonItem?.nome }}</span> 
+  </div>
+
+  <div *ngIf="isLoading" class="loading-container">
+    <app-loading></app-loading>
+  </div>
+
+  <div *ngIf="!isLoading" [style.background]="'url(/assets/images/website-background.jpg' + ')'">
+    <div class="container" style="background: white;">
+      <div class="pokemon-container flex-container">
+        <div class="pokemon-img">
+          <img [src]="pokemonItem?.img ? pokemonItem?.img : 'assets/images/default-pokemon.jpg'">  
+        </div>
+        <!-- <div class="pokemon-informations">
+          <p>{{ pokemonItem?.descricao }}</p>
+          <div class="flex-container">
+            <div>
+              <p class="description">Altura</p>
+              <p class="info">0,7 m</p>
+    
+              <p class="description">Peso</p>
+              <p class="info">6,9 kg</p>
+            </div>
+            <div>
+              <p class="description">Categoria</p>
+              <p class="info">Seed</p>
+    
+              <p class="description">Habilidades</p>
+              <p class="info">Overgrow</p>
+            </div>  
+          </div>
+        </div> -->
+      </div>
+    
+      <div class="pokemon-data pokemon-container flex-container">
+        <div>
+          <div>
+            <div style="display: block">
+              <canvas baseChart
+                height="300px"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+              </canvas>
+            </div>
+          </div>
+        </div>
+    
+        <div class="pokemon-types">
+          <p>Tipo(s)</p>
+          <div class="row types-container">
+            <app-pokemon-type [types]="pokemonItem?.types"></app-pokemon-type>
+          </div>
+        </div>
+      </div>
+  
+      <div class="evolutions">
+        <app-pokemon-evolutions [idEvolutions]="pokemonItem?.idEvolucoes" [imgEvolutions]="pokemonItem?.imgEvolucoes"></app-pokemon-evolutions>
+      </div>
+    </div>
+  </div>
+
+</div>

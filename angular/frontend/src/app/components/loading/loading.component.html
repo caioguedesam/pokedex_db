@@ -1,0 +1,42 @@
+<ng-container *ngIf="selectedLoading === 0">
+  <div class="stage">
+    <div class="cell">
+      <div class="evolution"></div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="selectedLoading === 1">
+  <div class="pixel"></div>
+</ng-container>
+
+<ng-container *ngIf="selectedLoading === 2">
+  <div class='container'>
+    <div class='pokemon'>
+      <div class='gastly'>
+        <div class='body'>  
+        </div>
+        <div class='eyes'>
+          <div class="eyes__eye eyes__eye--left">
+            <div class='eyes__eye--left--pupil pupil'></div>
+          </div>
+          <div class="eyes__eye eyes__eye--right ">
+            <div class='eyes__eye--right--pupil pupil'></div>
+          </div>
+        </div>
+        <div class='mouth'>
+          <div class='teeth'>
+            <div class='teeth__tooth--left tooth'></div>
+            <div class='teeth__tooth--right tooth'></div>
+          </div>
+        </div>
+        <div class='teath'>
+        </div>
+      </div>
+      <div class='gas'>
+      </div>
+    </div>
+    <div class='shadow'>
+    </div>
+  </div>
+</ng-container>

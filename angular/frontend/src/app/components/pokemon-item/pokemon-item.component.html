@@ -1,0 +1,12 @@
+<div class="content-container">
+  <img [src]="pokemon?.img ? pokemon?.img : 'assets/images/default-pokemon.jpg'">
+
+  <div class="pokemon-info">
+    <p class="pokemon-number">Nº {{ pokemon?.formatedId }}</p>
+    <p class="pokemon-name">{{ pokemon?.nome }}</p>
+
+    <div class="row types-container">
+      <app-pokemon-type [types]="pokemon?.types"></app-pokemon-type>
+    </div>
+  </div>
+</div>

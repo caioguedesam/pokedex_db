@@ -1,0 +1,23 @@
+.arrow-next {
+    span {
+        font-size: 8em;
+    }
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid gray;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.evolutions-container {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 1px solid gray;
+    background: #c5c5c5;
+    padding: 35px;
+    width: 100%;
+}
